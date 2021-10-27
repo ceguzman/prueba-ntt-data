@@ -9,8 +9,8 @@ public class CobGestor implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @Column(length = 30)
-    private String USUARIO_ID;
+    @Column(name = "USUARIO_ID" ,length = 30)
+    private String usuarioId;
 
     @Column(name = "PRIMER_NOMBRE", length = 30, nullable = false)
     private String primerNombre;
