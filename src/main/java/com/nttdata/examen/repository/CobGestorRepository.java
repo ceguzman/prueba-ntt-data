@@ -10,6 +10,6 @@ import java.util.List;
 @SuppressWarnings("unused")
 @Repository
 public interface CobGestorRepository extends JpaRepository<CobGestor, String> {
-   @Query("SELECT  CONCAT(u.primerNombre,u.primerApellido ) from  CobGestor u ")
-   List<String> findByConcatNames();
+    @Query("SELECT  CONCAT(u.primerNombre,' ',u.segundoNombre,' ',u.primerApellido,' ',u.segundoApellido) from  CobGestor u ")
+    List<String> findByAllConcatNames();
 }

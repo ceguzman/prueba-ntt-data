@@ -16,8 +16,8 @@ public class CobGestorController {
     @Autowired
     private CobGestorRepository cobGestorRepository;
 
-    @GetMapping("/carlos")
+    @GetMapping("/allconcatnames")
     public List<String> listar(){
-        return cobGestorRepository.findByConcatNames();
+        return cobGestorRepository.findByAllConcatNames();
     }
 }
